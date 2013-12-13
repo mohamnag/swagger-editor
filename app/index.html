@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="swagger-editor">
+    <head>
+        <meta charset="utf-8">
+        <title>Swagger-Editor</title>
+
+        <link rel="shortcut icon" href="favicon.ico">
+        <link href="lib/bootstrap/bootstrap.min.css" rel="stylesheet">
+        <link href="lib/bootstrap/bootstrap-responsive.min.css" rel="stylesheet">
+        <link href="lib/font-awesome/font-awesome.min.css" rel="stylesheet">
+
+        <link href="css/main.css" rel="stylesheet">
+    </head>
+
+    <body>
+
+        <div class="navbar navbar-fixed-top">
+            <div class="navbar-inner">
+                <div class="container-fluid">
+                    <a href="#apis" class="brand"><b>Swagger-Editor</b></a>
+                    <div class="nav-collapse">
+                        <ul class="nav">
+                            <li class="active"><a href="#apis">APIs</a></li>
+                            <li><a href="#import">Import</a></li>
+                            <li><a href="#export">Export</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container-fluid">
+            <div class="row-fluid">
+                <div class="span8 offset1">
+                    <div ng-view></div>
+                </div>
+                <div class="span3">
+                    <div class="alert alert-info">
+                        <h1><img src="img/info.png">
+                            {{help.header}}
+                        </h1>
+                        <p>{{help.contents}}</p>
+                    </div>
+                </div>
+            </div>
+        </div><!-- /container -->
+
+        <script src="lib/jquery/jquery-1.7.1.min.js"></script>
+        <script src="lib/jquery/jquery-ui-1.8.18.custom.min.js"></script>
+        <script src="lib/jquery/jquery.textarea.min.js"></script>
+        <script src="lib/bootstrap/bootstrap.min.js"></script>
+        <script src="lib/showdown.js"></script>
+        <script src="lib/angular/angular.js"></script>
+        
+        <script src="js/svc-apis.js"></script>
+        <script src="js/app.js"></script>
+        <script src="js/ctrl-apis.js"></script>	
+    </body>
+</html>
